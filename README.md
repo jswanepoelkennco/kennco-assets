@@ -1,0 +1,1 @@
+# kennco-assets
