@@ -4,115 +4,124 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KennCo Assets</title>
-
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 30px;
+      margin: 0;
       background: #f5f7fa;
+      color: #1f2937;
     }
 
     h1 {
       margin-bottom: 10px;
     }
 
+    p {
+      margin-bottom: 30px;
+      color: #4b5563;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      margin-top: 20px;
     }
 
     .card {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 15px;
+      background: #ffffff;
+      border: 1px solid #dbe1e8;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
       text-align: center;
     }
 
-    img {
-      max-width: 100%;
-      max-height: 140px;
+    .card img {
+      width: 100%;
+      max-height: 180px;
       object-fit: contain;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      background: #ffffff;
     }
 
     .filename {
       font-size: 14px;
       font-weight: bold;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      word-break: break-word;
     }
 
-    a {
+    .link {
       font-size: 13px;
-      color: blue;
+      color: #2563eb;
       text-decoration: none;
+    }
+
+    .link:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
-
 <body>
   <h1>KennCo Assets</h1>
   <p>Image library hosted on GitHub Pages</p>
 
   <div class="grid">
-
     <div class="card">
-      <img src="images/Commercial.png" />
+      <img src="Commercial.png" alt="Commercial" />
       <div class="filename">Commercial.png</div>
-      <a href="images/Commercial.png" target="_blank">Open image</a>
+      <a class="link" href="Commercial.png" target="_blank">Open image</a>
     </div>
 
     <div class="card">
-      <img src="images/Financial_Lines.png" />
-      <div class="filename">Financial_Lines.png</div>
-      <a href="images/Financial_Lines.png" target="_blank">Open image</a>
+      <img src="Financial Lines.png" alt="Financial Lines" />
+      <div class="filename">Financial Lines.png</div>
+      <a class="link" href="Financial Lines.png" target="_blank">Open image</a>
     </div>
 
     <div class="card">
-      <img src="images/Home.png" />
+      <img src="Home.png" alt="Home" />
       <div class="filename">Home.png</div>
-      <a href="images/Home.png" target="_blank">Open image</a>
+      <a class="link" href="Home.png" target="_blank">Open image</a>
     </div>
 
     <div class="card">
-      <img src="images/KennCo_Insurance.png" />
+      <img src="KennCo_Insurance.png" alt="KennCo Insurance" />
       <div class="filename">KennCo_Insurance.png</div>
-      <a href="images/KennCo_Insurance.png" target="_blank">Open image</a>
+      <a class="link" href="KennCo_Insurance.png" target="_blank">Open image</a>
     </div>
 
     <div class="card">
-      <img src="images/KennCo_Underwriting.png" />
+      <img src="KennCo_Underwriting.png" alt="KennCo Underwriting" />
       <div class="filename">KennCo_Underwriting.png</div>
-      <a href="images/KennCo_Underwriting.png" target="_blank">Open image</a>
+      <a class="link" href="KennCo_Underwriting.png" target="_blank">Open image</a>
     </div>
 
     <div class="card">
-      <img src="images/Motor_Trade.png" />
-      <div class="filename">Motor_Trade.png</div>
-      <a href="images/Motor_Trade.png" target="_blank">Open image</a>
+      <img src="Motor Trade.png" alt="Motor Trade" />
+      <div class="filename">Motor Trade.png</div>
+      <a class="link" href="Motor Trade.png" target="_blank">Open image</a>
     </div>
 
     <div class="card">
-      <img src="images/Motor.png" />
+      <img src="Motor.png" alt="Motor" />
       <div class="filename">Motor.png</div>
-      <a href="images/Motor.png" target="_blank">Open image</a>
+      <a class="link" href="Motor.png" target="_blank">Open image</a>
     </div>
 
     <div class="card">
-      <img src="images/Travel.png" />
+      <img src="Travel.png" alt="Travel" />
       <div class="filename">Travel.png</div>
-      <a href="images/Travel.png" target="_blank">Open image</a>
+      <a class="link" href="Travel.png" target="_blank">Open image</a>
     </div>
 
     <div class="card">
-      <img src="images/Van.png" />
+      <img src="Van.png" alt="Van" />
       <div class="filename">Van.png</div>
-      <a href="images/Van.png" target="_blank">Open image</a>
+      <a class="link" href="Van.png" target="_blank">Open image</a>
     </div>
-
   </div>
 </body>
 </html>
-
+``
