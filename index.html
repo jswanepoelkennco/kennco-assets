@@ -1,54 +1,205 @@
-<script>
-  const files = [
-    "Commercial.png",
-    "Financial_Lines.png",
-    "Home.png",
-    "KennCo_Insurance.png",
-    "KennCo_Underwriting.png",
-    "Motor_Trade.png",
-    "Motor.png",
-    "Travel.png",
-    "Van.png"
-  ];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KennCo Assets</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #1f2937;
+    }
 
-  const grid = document.getElementById("assetGrid");
+    .page {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
 
-  files.forEach((file, index) => {
-    const imageUrl = new URL(file, window.location.href).href;
+    h1 {
+      margin: 0 0 8px;
+      font-size: 40px;
+    }
 
-    const card = document.createElement("div");
-    card.className = "card";
+    p {
+      margin: 0 0 28px;
+      color: #6b7280;
+    }
 
-    card.innerHTML = `
-      <div class="preview">
-        ${file}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #dbe1e8;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+
+    .preview {
+      height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #eef2f7;
+      border-radius: 10px;
+      background: #fff;
+      margin-bottom: 14px;
+      overflow: hidden;
+      padding: 10px;
+    }
+
+    .preview img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .filename {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      word-break: break-word;
+    }
+
+    .actions a {
+      display: inline-block;
+      margin: 4px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #dbe1e8;
+      background: #fff;
+      color: #1f2937;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .actions a.primary {
+      background: #2563eb;
+      border-color: #2563eb;
+      color: #fff;
+    }
+
+    .actions a:hover {
+      opacity: 0.92;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>KennCo Assets</h1>
+    <p>Image library hosted on GitHub Pages</p>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="preview">
+          <img src="Commercial.png" alt="Commercial.png">
+        </div>
+        <div class="filename">Commercial.png</div>
+        <div class="actions">
+          <a class="primary" href="Commercial.png" target="_blank">Open image</a>
+          <a href="Commercial.png" download>Download</a>
+        </div>
       </div>
 
-      <div class="filename">${file}</div>
-      <div class="filepath">${imageUrl}</div>
-
-      <div class="actions">
-        ${file}Open image</a>
-        ${file}Download</a>
-        <button class="btn" type="button" onclick="copyUrl('${imageUrl}', ${index})">Copy image URL</button>
+      <div class="card">
+        <div class="preview">
+          <img src="Financial_Lines.png" alt="Financial_Lines.png">
+        </div>
+        <div class="filename">Financial_Lines.png</div>
+        <div class="actions">
+          <a class="primary" href="Financial_Lines.png" target="_blank">Open image</a>
+          <a href="Financial_Lines.png" download>Download</a>
+        </div>
       </div>
 
-      <div class="copied" id="copied-${index}">Copied to clipboard</div>
-    `;
+      <div class="card">
+        <div class="preview">
+          <img src="Home.png" alt="Home.png">
+        </div>
+        <div class="filename">Home.png</div>
+        <div class="actions">
+          <a class="primary" href="Home.png" target="_blank">Open image</a>
+          <a href="Home.png" download>Download</a>
+        </div>
+      </div>
 
-    grid.appendChild(card);
-  });
+      <div class="card">
+        <div class="preview">
+          <img src="KennCo_Insurance.png" alt="KennCo_Insurance.png">
+        </div>
+        <div class="filename">KennCo_Insurance.png</div>
+        <div class="actions">
+          <a class="primary" href="KennCo_Insurance.png" target="_blank">Open image</a>
+          <a href="KennCo_Insurance.png" download>Download</a>
+        </div>
+      </div>
 
-  function copyUrl(url, index) {
-    navigator.clipboard.writeText(url).then(() => {
-      const message = document.getElementById(`copied-${index}`);
-      message.style.display = "block";
+      <div class="card">
+        <div class="preview">
+          <img src="KennCo_Underwriting.png" alt="KennCo_Underwriting.png">
+        </div>
+        <div class="filename">KennCo_Underwriting.png</div>
+        <div class="actions">
+          <a class="primary" href="KennCo_Underwriting.png" target="_blank">Open image</a>
+          <a href="KennCo_Underwriting.png" download>Download</a>
+        </div>
+      </div>
 
-      setTimeout(() => {
-        message.style.display = "none";
-      }, 1800);
-    }).catch(() => {
-      alert("Could not copy the URL. Please copy it manually.");
-    });
-  }
-</script>
+      <div class="card">
+        <div class="preview">
+          <img src="Motor_Trade.png" alt="Motor_Trade.png">
+        </div>
+        <div class="filename">Motor_Trade.png</div>
+        <div class="actions">
+          <a class="primary" href="Motor_Trade.png" target="_blank">Open image</a>
+          <a href="Motor_Trade.png" download>Download</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="preview">
+          <img src="Motor.png" alt="Motor.png">
+        </div>
+        <div class="filename">Motor.png</div>
+        <div class="actions">
+          <a class="primary" href="Motor.png" target="_blank">Open image</a>
+          <a href="Motor.png" download>Download</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="preview">
+          <img src="Travel.png" alt="Travel.png">
+        </div>
+        <div class="filename">Travel.png</div>
+        <div class="actions">
+          <a class="primary" href="Travel.png" target="_blank">Open image</a>
+          <a href="Travel.png" download>Download</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="preview">
+          <img src="Van.png" alt="Van.png">
+        </div>
+        <div class="filename">Van.png</div>
+        <div class="actions">
+          <a class="primary" href="Van.png" target="_blank">Open image</a>
+          <a href="Van.png" download>Download</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
