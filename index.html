@@ -1,19 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KennCo Assets</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      margin: 0;
+      background: #f5f7fa;
+      color: #1f2937;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 30px;
+      color: #4b5563;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #dbe1e8;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: contain;
+      margin-bottom: 12px;
+      background: #ffffff;
+    }
+
+    .filename {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      word-break: break-word;
+    }
+
+    .link {
+      font-size: 13px;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-
   <h1>KennCo Assets</h1>
+  <p>Image library hosted on GitHub Pages</p>
 
-  <h2>Images</h2>
+  <div class="grid">
+    <div class="card">
+      images/Commercial.png
+      <div class="filename">Commercial.png</div>
+      images/Commercial.pngOpen image</a>
+    </div>
 
-  images/logo.png
-  <br><br>
+    <div class="card">
+      images/Financial_Lines.png
+      <div class="filename">Financial_Lines.png</div>
+      images/Financial_Lines.pngOpen image</a>
+    </div>
 
-  images/banner.png
+    <div class="card">
+      images/Home.png
+      <div class="filename">Home.png</div>
+      images/Home.pngOpen image</a>
+    </div>
 
+    <div class="card">
+      images/KennCo_Insurance.png
+      <div class="filename">KennCo_Insurance.png</div>
+      images/KennCo_Insurance.pngOpen image</a>
+    </div>
+
+    <div class="card">
+      images/KennCo_Underwriting.png
+      <div class="filename">KennCo_Underwriting.png</div>
+      images/KennCo_Underwriting.pngOpen image</a>
+    </div>
+
+    <div class="card">
+      images/Motor_Trade.png
+      <div class="filename">Motor_Trade.png</div>
+      images/Motor_Trade.pngOpen image</a>
+    </div>
+
+    <div class="card">
+      images/Motor.png
+      <div class="filename">Motor.png</div>
+      images/Motor.pngOpen image</a>
+    </div>
+
+    <div class="card">
+      images/Travel.png
+      <div class="filename">Travel.png</div>
+      images/Travel.pngOpen image</a>
+    </div>
+
+    <div class="card">
+      images/Van.png
+      <div class="filename">Van.png</div>
+      images/Van.pngOpen image</a>
+    </div>
+  </div>
 </body>
 </html>
