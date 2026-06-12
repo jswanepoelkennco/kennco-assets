@@ -5,123 +5,224 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KennCo Assets</title>
   <style>
+    :root {
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --border: #dbe1e8;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --success: #166534;
+      --success-bg: #dcfce7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      padding: 30px;
       margin: 0;
-      background: #f5f7fa;
-      color: #1f2937;
+      padding: 32px;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .page {
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     h1 {
-      margin-bottom: 10px;
+      margin: 0 0 8px;
+      font-size: 40px;
+      line-height: 1.1;
     }
 
-    p {
-      margin-bottom: 30px;
-      color: #4b5563;
+    .intro {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 16px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
     }
 
     .card {
-      background: #ffffff;
-      border: 1px solid #dbe1e8;
-      border-radius: 12px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
       padding: 16px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 320px;
     }
 
-    .card img {
-      width: 100%;
-      max-height: 180px;
+    .preview {
+      height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #eef2f7;
+      border-radius: 10px;
+      background: #fff;
+      margin-bottom: 14px;
+      overflow: hidden;
+      padding: 10px;
+    }
+
+    .preview img {
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
-      margin-bottom: 12px;
-      background: #ffffff;
+      display: block;
     }
 
     .filename {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: bold;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       word-break: break-word;
     }
 
-    .link {
-      font-size: 13px;
-      color: #2563eb;
-      text-decoration: none;
+    .filepath {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      word-break: break-word;
     }
 
-    .link:hover {
-      text-decoration: underline;
+    .actions {
+      display: grid;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      font-size: 14px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      border-color: #c3cfdb;
+      background: #f9fafb;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      border-color: var(--primary-hover);
+    }
+
+    .copied {
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--success);
+      background: var(--success-bg);
+      border-radius: 6px;
+      padding: 6px 8px;
+      display: none;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .card {
+        min-height: auto;
+      }
+
+      .preview {
+        height: 150px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>KennCo Assets</h1>
-  <p>Image library hosted on GitHub Pages</p>
+  <div class="page">
+    <h1>KennCo Assets</h1>
+    <p class="intro">Image library hosted on GitHub Pages</p>
 
-  <div class="grid">
-    <div class="card">
-      <img src="Commercial.png" alt="Commercial" />
-      <div class="filename">Commercial.png</div>
-      <a class="link" href="Commercial.png" target="_blank">Open image</a>
-    </div>
-
-    <div class="card">
-      <img src="Financial Lines.png" alt="Financial Lines" />
-      <div class="filename">Financial Lines.png</div>
-      <a class="link" href="Financial Lines.png" target="_blank">Open image</a>
-    </div>
-
-    <div class="card">
-      <img src="Home.png" alt="Home" />
-      <div class="filename">Home.png</div>
-      <a class="link" href="Home.png" target="_blank">Open image</a>
-    </div>
-
-    <div class="card">
-      <img src="KennCo_Insurance.png" alt="KennCo Insurance" />
-      <div class="filename">KennCo_Insurance.png</div>
-      <a class="link" href="KennCo_Insurance.png" target="_blank">Open image</a>
-    </div>
-
-    <div class="card">
-      <img src="KennCo_Underwriting.png" alt="KennCo Underwriting" />
-      <div class="filename">KennCo_Underwriting.png</div>
-      <a class="link" href="KennCo_Underwriting.png" target="_blank">Open image</a>
-    </div>
-
-    <div class="card">
-      <img src="Motor Trade.png" alt="Motor Trade" />
-      <div class="filename">Motor Trade.png</div>
-      <a class="link" href="Motor Trade.png" target="_blank">Open image</a>
-    </div>
-
-    <div class="card">
-      <img src="Motor.png" alt="Motor" />
-      <div class="filename">Motor.png</div>
-      <a class="link" href="Motor.png" target="_blank">Open image</a>
-    </div>
-
-    <div class="card">
-      <img src="Travel.png" alt="Travel" />
-      <div class="filename">Travel.png</div>
-      <a class="link" href="Travel.png" target="_blank">Open image</a>
-    </div>
-
-    <div class="card">
-      <img src="Van.png" alt="Van" />
-      <div class="filename">Van.png</div>
-      <a class="link" href="Van.png" target="_blank">Open image</a>
-    </div>
+    <div class="grid" id="assetGrid"></div>
   </div>
+
+  <script>
+    const files = [
+      "Commercial.png",
+      "Financial Lines.png",
+      "Home.png",
+      "KennCo_Insurance.png",
+      "KennCo_Underwriting.png",
+      "Motor Trade.png",
+      "Motor.png",
+      "Travel.png",
+      "Van.png"
+    ];
+
+    const grid = document.getElementById("assetGrid");
+
+    files.forEach((file, index) => {
+      const imageUrl = new URL(file, window.location.href).href;
+
+      const card = document.createElement("div");
+      card.className = "card";
+
+      card.innerHTML = `
+        <div class="preview">
+          <img src="${file}" iv>
+
+        <div class="filename">${file}</div>
+        <div class="filepath">${imageUrl}</div>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="${class="btn" href=          <button class="btn" type="button" onclick="copyUrl('${imageUrl}', ${index})">Copy image URL</button>
+        </div>
+
+        <div class="copied" id="copied-${index}">Copied to clipboard</div>
+      `;
+
+      grid.appendChild(card);
+    });
+
+    function copyUrl(url, index) {
+      navigator.clipboard.writeText(url).then(() => {
+        const message = document.getElementById(`copied-${index}`);
+        message.style.display = "block";
+
+        setTimeout(() => {
+          message.style.display = "none";
+        }, 1800);
+      }).catch(() => {
+        alert("Could not copy the URL. Please copy it manually.");
+      });
+    }
+  </script>
 </body>
 </html>
 ``
